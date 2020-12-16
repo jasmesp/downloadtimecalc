@@ -36,21 +36,17 @@ public:
 
 	float getX() {
 		return z;
-		
 	};
 
 	float getY() {
 		return a;
-		
 	};
 
 	string getOp() {
-
 		return ope;
 	}
 
 	float getAns() {
-
 		return k;
 	}
 
@@ -86,9 +82,7 @@ float cl() {
 	cal.mult();
 	cout << cal.getAns() << endl;
 
-
-
-		main();
+	main();
 };
 
 float calc() {
