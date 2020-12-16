@@ -1,4 +1,3 @@
-
 #include <iostream>
 
 using namespace std;
@@ -22,11 +21,82 @@ float dt() {
 	return z;
 }
 
+class Calculator {
+public:
+	void setX(float x) {
+		z = x;
+	};
+	void setY(float y) {
+		a = y;
+	};
+
+	void setOp(string op) {
+		ope = op;
+	};
+
+	float getX() {
+		return z;
+		
+	};
+
+	float getY() {
+		return a;
+		
+	};
+
+	string getOp() {
+
+		return ope;
+	}
+
+	float getAns() {
+
+		return k;
+	}
+
+	void mult() {
+		k = (a * z);
+	}
+
+private:
+	float z;
+	float a;
+	float k;
+
+	string ope;
+};
+
+float cl() {
+	Calculator cal;
+	//string oper;
+	float x;
+	float y;
+	string op;
+	//string ope;
+	cout << "set x" << endl;
+	cin >> x;
+	cal.setX(x);
+	cout << "set y" << endl;
+	cin >> y;
+	cal.setY(y);
+	cout << "set operation" << endl;
+	cin >> op;
+	cal.setOp(op);
+	cout << cal.getOp() << endl;
+	cal.mult();
+	cout << cal.getAns() << endl;
+
+
+
+		main();
+};
+
 float calc() {
 	float y;
 	float x;
 	string oper;
-	cin >> y >> x >> oper;
+	cout << "enter number four function operation number" << endl;
+	cin >> y >> oper >> x;
 	if (oper == "*")
 		cout << y * x << endl;
 	else if (oper == "+")
@@ -50,13 +120,20 @@ float con() {
 int main()
 {
 	string cord;
-	cout << "calc or downloads?" << endl;
+	//float i;
+	//float j;
+	string op;
+	cout << "calc downloads or exit?" << endl;
 	cin >> cord;
 	if (cord == "calc")
 		calc();
 
-	else
+	else if (cord == "downloads")
 		con();
-	return 0;
-}
 
+	else if (cord == "class")
+		cl();
+
+	else
+		return 1;
+}
