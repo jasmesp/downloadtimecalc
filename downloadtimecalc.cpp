@@ -89,7 +89,7 @@ float calc() {
 	float y;
 	float x;
 	string oper;
-	cout << "enter number four function operation number" << endl;
+	cout << "enter number | four function operation | number" << endl;
 	cin >> y >> oper >> x;
 	if (oper == "*")
 		cout << y * x << endl;
