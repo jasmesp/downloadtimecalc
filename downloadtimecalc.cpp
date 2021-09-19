@@ -62,7 +62,7 @@ private:
 	string ope;
 };
 
-float cl() {
+void cl() {
 	Calculator cal;
 	//string oper;
 	float x;
